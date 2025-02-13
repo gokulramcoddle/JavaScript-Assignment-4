@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Js Assignment-4</title>
+</head>
+<body>
+    <div class="one container">
+        <h2>Question 1</h2>
+        <div id="Q1">
+        <p id="para">Hi,I'm Gokul ram</p>
+        </div>
+        <button onclick="hide()">Hide-div</button>
+        <button onclick="change()">Change</button>
+        <button onclick="showhide()">show/Hide</button>
+    </div>
+    <div class="two container">
+        <h2>Question 2</h2>
+        <div class="Q2">
+            <select id="list" onchange="listselect()">
+                <option>--select below--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+            <div id="message-box">
+            </div>
+        </div>
+    </div>
+    <div class="three container">
+        <h2>Question 3</h2>
+     <div id="Q3">
+     </div>
+    </div>
+    <div class="four container">
+        <h2>Question 4</h2>
+        <div class="Q4">
+            <form id="form">
+                <table>
+                <tr>
+                <th><label for="username">Name:</label></th>
+                <th><input type="text" id="username"></th>
+                </tr>
+                <tr><th><th><div id="username-con" class="box"></div></th></th></tr>
+                <tr>
+                <th><label for="phone">Ph.no:</label></th>
+                <th><input type="text" id="phone"></th>
+                </tr>
+                <tr><th><th><div id="phone-con" class="box"></div></th></th>
+                </tr>
+                <tr>
+                <th><label for="place">Place:</label></th>
+                <th><input type="text" id="place"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><div id="place-con" class="box"></div></th>
+                </tr>
+                <tr>
+                <th><label for="company">Company:</label></th>
+                <th><input type="text" id="company"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><div id="company-con" class="box"></div></th>
+                </tr>
+                <tr>
+                <th><label for="pincode">Pincode:</label></th>
+                <th><input type="text" id="pincode"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><div id="pincode-con" class="box"></div></th>
+                </tr>
+                <tr>
+                <th></th>
+                <th><button type="submit">Submit</button>
+                <button type="button" id="prepop" onclick="prepopulatebtn()" disabled>prepopulate</button></th>
+                </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="five container">
+        <h2>Question 5</h2>
+        <div class="Q5">
+        <form id="titleform">
+         <label for="titlename">Enter the title name: </label>
+         <input type="text" id="titleinput" maxlength="50">
+         <div id="error"></div>
+         <button type="submit">Change</button>
+         </form>
+        </div>
+    </div>
+    <div class="six container">
+        <h2>Question 6</h2>
+        <h3>Press cntrl + Enter to see Alert box..</h3>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
