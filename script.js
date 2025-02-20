@@ -11,7 +11,7 @@ function change() {
     document.getElementById("Q1").style.backgroundColor="blue";
 }
 function showhide(){
-    var sh=document.getElementById("para");
+    let sh=document.getElementById("para");
     if(sh.style.display=="none"){
        sh.style.display="block";
     }
@@ -22,10 +22,10 @@ function showhide(){
 
 // Q2)Create a select box with numbers 1 to 10,  when selecting 9, you should change the selection to 10 and show a message that "9 is fully occupied please select another number", when selecting any number other than 9 it should show a message as "you selected 'particular number' " in a div, on hovering the div it should change the background color of the div into a highlighting shade, while the mouse pointer leaves the message area the background color should go back to as before (don't use CSS to attain the hovering functionality)
 
-var messagebox=document.getElementById("message-box");
+let messagebox=document.getElementById("message-box");
 function listselect(){
-    var listopt=document.getElementById("list");
-    var selectedVal=listopt.value;
+    let listopt=document.getElementById("list");
+    let selectedVal=listopt.value;
     if(selectedVal=='9'){
         listopt.value='10'
         messagebox.innerHTML="9 is fully occupied, please select any other number";
@@ -44,18 +44,18 @@ function listselect(){
 
 // Q3)Consider an array with names of 10 programming languages, and make 10 buttons by iterating this array, when clicking on each button the name of the programming language should be shown in a corresponding div. 
 
-var languages = [
+const languages = [
     "JavaScript", "Python", "Java", "C++", "C#", 
     "Ruby", "Swift", "Go", "Kotlin", "PHP"
 ];
-var container=document.getElementById("Q3")
+let container=document.getElementById("Q3")
 languages.forEach((lang,idx)=>{
-    var button=document.createElement("button");
+    let button=document.createElement("button");
     button.innerText=lang;
     button.onclick=function(){
         document.getElementById("output-"+idx).innerText=lang;
     }
-    var divbox=document.createElement("div");
+    let divbox=document.createElement("div");
     divbox.id="output-"+idx;
     divbox.innerText="click the above button!"
     divbox.className="output-con";
@@ -73,17 +73,17 @@ languages.forEach((lang,idx)=>{
 
 document.getElementById("form").addEventListener("submit", function(event) {
 event.preventDefault();
-var username=document.getElementById("username").value.trim();
-var phone=document.getElementById("phone").value.trim();
-var place=document.getElementById("place").value.trim();
-var company=document.getElementById("company").value.trim();
-var pincode=document.getElementById("pincode").value.trim();
+let username=document.getElementById("username").value.trim();
+let phone=document.getElementById("phone").value.trim();
+let place=document.getElementById("place").value.trim();
+let company=document.getElementById("company").value.trim();
+let pincode=document.getElementById("pincode").value.trim();
 
-var usernamebox=document.getElementById("username-con");
-var phonebox=document.getElementById("phone-con");
-var placebox=document.getElementById("place-con");
-var companybox=document.getElementById("company-con");
-var pincodebox=document.getElementById("pincode-con");
+let usernamebox=document.getElementById("username-con");
+let phonebox=document.getElementById("phone-con");
+let placebox=document.getElementById("place-con");
+let companybox=document.getElementById("company-con");
+let pincodebox=document.getElementById("pincode-con");
 
 usernamebox.innerText="";
 phonebox.innerText="";
@@ -91,7 +91,7 @@ placebox.innerText="";
 companybox.innerText="";
 pincodebox.innerText="";
 
-var valid=true;
+let valid=true;
 
 if(username==""){
  usernamebox.innerText="Please enter name!!";
@@ -126,7 +126,7 @@ else if(isNaN(pincode)){
     valid=false;
 }
 if(valid){
-    var data={username,phone,place,company,pincode};
+    const data={username,phone,place,company,pincode};
     localStorage.setItem("data",JSON.stringify(data));
     document.getElementById("form").reset();
     document.getElementById("prepop").disabled=false;
@@ -134,9 +134,9 @@ if(valid){
 }
 });
 function prepopulatebtn(){
-    var storedData=localStorage.getItem("data");
+    let storedData=localStorage.getItem("data");
     if(storedData){
-        var collectedData=JSON.parse(storedData);
+        let collectedData=JSON.parse(storedData);
         document.getElementById("username").value=collectedData.username;
         document.getElementById("phone").value=collectedData.phone;
         document.getElementById("place").value=collectedData.place;
@@ -152,7 +152,7 @@ function prepopulatebtn(){
 
 document.getElementById("titleform").addEventListener("submit",function(event){
     event.preventDefault();
-    var inputtext=document.getElementById("titleinput").value.trim();
+    let inputtext=document.getElementById("titleinput").value.trim();
     if(inputtext==""){
         document.getElementById("error").innerText="Title cannot be empty";
     }
